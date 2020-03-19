@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+            html *{
+                padding: 0;
+                margin: 0px;
+
+            }
+           
+            .layout article div{
+                height: 200px;
+                
+            }
+            .left-right-center{
+                height:200px;
+                overflow: hidden;
+            }
+           
+
+            .layout.float  #A.left{
+                   float: left;
+                   background-color: red;
+                   width: 300px;
+
+
+               } 
+          
+            .layout.float .right{
+                   float: right;
+                   background-color: aqua;
+                    width: 300px;
+               }
+           .layout.float .center{
+                   background-color:white;
+               }
+                /* float end */
+
+                /* absolute start*/
+
+
+                .layout.absolute .left-right-center{
+                    position: relative;
+                }
+                .layout.absolute .left{
+                    position: absolute;
+                    width: 300px;
+                    background-color: red;
+                    left: 0px;
+                }
+
+                .layout.absolute .right{
+                    position: absolute;
+                    width: 300px;
+                    background-color: aqua;
+                    right: 0px;
+
+                }
+                .layout.absolute .center{
+                    position: absolute;
+                    left: 300px;
+                    right: 300px;
+                    background: grey;
+                }
+
+
+
+                /*   absolute end */
+                /* 圣杯布局 start*/
+
+
+                .layout.SB .left-center-right{
+                   
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    
+                }
+                .layout.SB .left{
+                    float: left;
+                    background: red;
+                    width: 300px;
+                    margin-left: -100%;
+
+                    position: relative;
+
+                    left: -100px;
+
+                }
+
+                .layout.SB .right{
+
+                    float: left;
+                    background: green;
+                    width: 300px;  
+                    
+                    margin-left: -300px;
+                    right: -100px;
+
+                    position: relative;
+                    
+                   
+                }
+                .layout.SB .center{
+                    float: left;
+                    background: gray;  /* DOM中先center */
+                    width: 100%;
+
+                   
+                }
+ 
+    </style>
+
+</head>
+<body>
+    <section class="layout float">
+        
+        <article class="left-right-center">
+            <div class="left" id="A">
+                I am Left.
+            </div>
+                <div class="right">
+                    I am right
+
+
+                </div>
+                    <div class="center"> 
+                        浮动解决方案
+                        I am center
+                    </div>
+
+        </article>  
+    </section>
+<!-- 
+ <section class="layout absolute">
+     <article class="left-right-ceter">
+         <div class="left">
+             I am left.
+
+         </div>
+         <div class="right">
+             I am right
+
+
+         </div>
+         <div class="center">  
+             I am center
+             绝对定位
+         </div>
+     </article> -->
+    
+
+     <section class="layout SB">
+         <article class="left-center-right">
+
+            <div class="center">
+                I am center
+            </div>
+            <div class="left">
+
+                I am left
+            </div>
+            <div class="right">
+                I am right
+            </div>
+
+         </article>
+     </section>
+ </section>
+
+
+
+
+</body>
+</html>

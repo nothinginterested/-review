@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        html *{
+            padding: o;
+            margin: 0;
+        }
+        .layout article div{
+            height: 100px;
+
+        }
+
+        .left-center-right{
+            display: flex;
+
+        }
+
+        .layout.flex .left{
+
+            width: 300px;
+            background: red;
+
+
+        }
+        .layout.flex .right{
+            width: 300px;
+            background: grey;
+        }
+
+        .layout.flex .center{
+            flex: 2;
+            background: green;
+
+
+        }
+
+        .layout.grid .left-center-right{
+
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+
+        }
+
+        .layout.grid .left{
+            background: red;
+
+        }
+
+        .layout.grid cent
+        er{
+            background: blue;
+
+        }
+        .layout.grid .right{
+            background: black;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+        <section class="layout flex"> 
+            <article class="left-center-right">
+
+                <div class="left">
+                    I am left
+                </div>
+                <div class="center">   
+                    I am center
+                </div>
+                <div class="right">
+                    I am right
+                </div>
+            </article>
+        </section>
+        
+
+
+
+        <section  class="layout grid">
+
+
+            <article class="left-center-right">
+                <div class="left">
+                    I am left
+                </div>
+                <div class="center">
+                    <h1>GRid</h1>
+                    I am center
+
+                </div>
+                <div class="right">
+                    I am right
+                </div>
+            </article>
+        </section>
+</html>
